@@ -27,7 +27,7 @@ public class NewsController {
     @RequestMapping("/list.do")
     public JsonBean list(String keyword){
         List<News> list = newsService.findAllnews(keyword);
-
+        System.out.println(list);
         return new JsonBean(1, list);
     }
     @RequestMapping("/add.do")
